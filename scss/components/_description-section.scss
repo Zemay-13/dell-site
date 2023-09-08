@@ -1,0 +1,33 @@
+@import "../base";
+@import "../mixin";
+
+.description-section {
+    .description-section__title {
+        color: $color-black;
+        font-family: Roboto;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 50px;
+        padding-bottom: 29px;
+
+        @media(max-width:480px) {
+            font-size: 30px;
+            padding-bottom: 20px;
+            line-height: normal;
+        }
+    }
+
+    .description-section__text {
+        color: #838383;
+        font-family: Roboto;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%;
+
+        @media(max-width:480px) {
+            font-size: 15px;
+        }
+    }
+
+}

@@ -1,6 +1,23 @@
 @import "./base";
+@import "./mixin";
 
 .home {
+    display: flex;
+
+    &__home-content-left {
+        width: 73%;
+    }
+
+    &__home-content-right {
+        width: 27%;
+    }
+}
+
+.home-content-left {
     background-color: $color-gray;
-    height: 900px;
+
+}
+
+.home-content-right {
+    background-color: #F9F9F9;
 }

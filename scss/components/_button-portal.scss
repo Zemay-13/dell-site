@@ -1,3 +1,41 @@
-h1 {
-    color: red;
+@import "../base";
+@import "../mixin";
+
+.button-portal {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    @media(max-width: 480px) {
+        gap: 15px;
+    }
+
+    .button-portal__button {
+        background-color: $color-blue;
+        border-radius: 30px;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width: 480px) {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    .button-portal__text {
+        color: $color-black;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 30px;
+
+        @media(max-width: 480px) {
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
 }

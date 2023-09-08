@@ -1,0 +1,69 @@
+@import "./base";
+@import "./mixin";
+
+.plusses {
+    background-color: $color-gray;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .plusses__bg-text {
+        position: absolute;
+        left: 0;
+        top: 152px;
+    }
+
+    .plusses__container {
+        margin-top: 87px;
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 1400px;
+    }
+
+    .plusses__info {
+        display: flex;
+        align-items: center;
+
+    }
+}
+
+
+
+.info {
+    width: 100%;
+
+    @include desktop-min {
+        margin: 0 15px 0 15px;
+    }
+
+    .info__img {
+        width: 100%;
+
+        @include desktop-min {
+            max-width: 500px;
+        }
+    }
+
+    .info__description-section {
+        max-width: 518px;
+
+        @include desktop-min {
+            max-width: 250px;
+        }
+
+        .plusses__description-section-title {
+            padding: 0 0 37px 0;
+
+            @include desktop-min {}
+
+        }
+
+        .plusses__description-section-text {
+            padding-bottom: 55px;
+
+        }
+    }
+
+
+}
