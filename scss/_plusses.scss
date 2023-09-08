@@ -38,7 +38,7 @@
         max-width: 1400px;
 
         @include phone {
-            margin-top: 100px;
+            margin: 100px 15px 0 15px;
         }
     }
 
@@ -136,6 +136,7 @@
     padding: 30px 37px 35px 30px;
     position: relative;
     max-width: 330px;
+
 
     @include phone {
         max-width: 345px;

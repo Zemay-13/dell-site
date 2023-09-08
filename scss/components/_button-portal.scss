@@ -19,6 +19,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+            padding-left: 10px;
+        }
 
         @media(max-width: 480px) {
             width: 45px;
@@ -32,6 +39,11 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 30px;
+        transition: 0.3s ease;
+
+        &:hover {
+            color: $color-blue;
+        }
 
         @media(max-width: 480px) {
             font-size: 15px;
