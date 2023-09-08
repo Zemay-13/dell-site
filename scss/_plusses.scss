@@ -7,10 +7,27 @@
     justify-content: center;
     position: relative;
 
-    .plusses__bg-text {
+    &__bg-text {
         position: absolute;
         left: 0;
         top: 152px;
+
+        @include tablet {
+            display: none;
+
+        }
+    }
+
+    &__bg-text-mobile {
+        display: none;
+
+        @include tablet {
+            display: block;
+            position: absolute;
+            bottom: -100px;
+            right: 0;
+            max-width: 335px;
+        }
     }
 
     .plusses__container {
@@ -19,51 +36,160 @@
         z-index: 10;
         width: 100%;
         max-width: 1400px;
+
+        @include phone {
+            margin-top: 100px;
+        }
     }
 
     .plusses__info {
+        padding-bottom: 48px;
         display: flex;
         align-items: center;
+        justify-content: center;
 
+        @include desktop-min {
+            margin: 0 15px 48px 15px;
+        }
+
+        @include tablet {
+            justify-content: flex-start;
+        }
     }
+
+    &__container-cards {
+        display: flex;
+
+        justify-content: center;
+        gap: 27px;
+
+        @media(max-width: 1445px) {
+            flex-wrap: wrap;
+        }
+
+        @include tablet {
+            margin-top: 179px;
+        }
+    }
+
+
 }
 
-
-
 .info {
-    width: 100%;
+    position: relative;
 
-    @include desktop-min {
-        margin: 0 15px 0 15px;
-    }
-
-    .info__img {
+    &__img {
         width: 100%;
 
         @include desktop-min {
-            max-width: 500px;
+            max-width: 450px;
+        }
+
+        @include tablet {
+            display: none;
         }
     }
 
-    .info__description-section {
+    &__img-mobile {
+        display: none;
+
+        @include tablet {
+            display: block;
+            position: absolute;
+            bottom: -100px;
+            right: 0;
+            max-width: 280px;
+        }
+    }
+
+    &__description-section {
+        width: 100%;
         max-width: 518px;
 
-        @include desktop-min {
-            max-width: 250px;
-        }
+        @include desktop-min {}
 
         .plusses__description-section-title {
-            padding: 0 0 37px 0;
+            padding-bottom: 37px;
 
-            @include desktop-min {}
+            @include tablet-min {
+                padding-bottom: 20px;
+            }
 
         }
 
         .plusses__description-section-text {
             padding-bottom: 55px;
 
+            @include tablet-min {
+                padding-bottom: 30px;
+                max-width: 300px;
+            }
         }
     }
 
+}
 
+
+.card-plusses {
+    background-color: $color-black;
+    border-radius: 20px;
+    padding: 30px 37px 35px 30px;
+    position: relative;
+    max-width: 330px;
+
+    @include phone {
+        max-width: 345px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    &__bg-decor {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include phone {
+            max-width: 120px;
+        }
+    }
+
+    &__icon {
+        padding: 17px;
+        background: #343A41;
+        border-radius: 15px;
+        margin-bottom: 25px;
+
+        @include phone {
+            margin-bottom: 15px;
+            padding: 10px;
+            max-width: 45px;
+        }
+    }
+
+    &__title {
+        color: #FFF;
+        font-family: $font-roboto;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 13px;
+
+        @include phone {
+            font-size: 17px;
+            margin-bottom: 10px;
+            max-width: 180px;
+        }
+    }
+
+    &__text {
+        color: #B7B7B7;
+        font-family: $font-roboto;
+        font-size: 16px;
+        font-weight: 300;
+
+        @include phone {
+
+            max-width: 250px;
+        }
+    }
 }
