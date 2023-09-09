@@ -1,0 +1,76 @@
+@import "./base";
+@import "./mixin";
+
+.contacts {
+    .contacts__bg-text {}
+
+    .contacts__container-content {
+        position: relative;
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+    }
+
+    .contacts__img-phone {
+        position: absolute;
+        right: 50%;
+
+    }
+
+    .contacts__left-content {}
+
+    .contacts__right-content {}
+
+    .content-title {
+        &_black {
+            color: $color-black;
+            font-family: Roboto;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 50px;
+            margin-bottom: 18px;
+        }
+
+        &_white {
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 50px;
+            margin-bottom: 18px;
+        }
+
+
+
+    }
+
+    .content-text {
+        &_black {
+            color: #838383;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        &_white {
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+    }
+}
+
+.left-content {
+    width: 50%;
+    background-color: #F9F9F9;
+}
+
+
+.right-content {
+    width: 50%;
+    background-color: $color-black;
+}

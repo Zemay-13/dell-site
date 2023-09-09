@@ -7,9 +7,14 @@
     justify-content: center;
     padding: 172px 0 526px 0;
 
+    @media (max-width: 480px) {
+        padding: 120px 0 120px 0;
+    }
+
     .news__container {
         width: 100%;
         max-width: 1400px;
+        margin: 0 15px 0 15px;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -21,6 +26,12 @@
         display: flex;
         justify-content: space-between;
         padding-bottom: 70px;
+
+        @include tablet {
+            flex-direction: column;
+            padding-bottom: 40px;
+
+        }
     }
 
     .news__bottom {
@@ -35,23 +46,36 @@
 .news__description-section {
     max-width: 726px;
 
+    @include desktop-min {
+        max-width: 500px;
+    }
+
     .news__description-section-title {}
 
-
-
-    .news__description-section-text {}
+    .news__description-section-text {
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 
-
 .card-news {
+    box-shadow: 0px 0px 150px 0px rgba(218, 218, 218, .667);
+    background-color: #FFF;
     cursor: pointer;
+    margin-bottom: 32px;
     border-radius: 56px 0 0;
     position: relative;
     transition: 0.3s ease;
 
+    @media(max-width: 480px) {
+        max-width: 325px;
+        margin-bottom: 65px;
+    }
+
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 
     &__img {
@@ -67,6 +91,10 @@
         right: 0;
         left: 0px;
         color: $color-black;
+
+        @media(max-width: 480px) {
+            top: 170px;
+        }
     }
 
     &__date-block {
@@ -80,9 +108,14 @@
         z-index: 11;
         bottom: -30px;
         right: 20px;
-
         background-color: #FFF;
         border-radius: 50px;
+
+        @media(max-width: 480px) {
+            bottom: -30px;
+            right: 20px;
+        }
+
 
         .card-news__button-arrow {
             max-width: 55px;
@@ -90,6 +123,11 @@
             margin: 15px;
             border-radius: 50px;
             background-color: $color-black;
+
+            @media(max-width: 480px) {
+                padding: 8px;
+                margin: 12px;
+            }
         }
     }
 
@@ -103,6 +141,12 @@
     z-index: 10;
     padding: 0 0 0 30px;
 
+
+    @media (max-width: 480px) {
+        bottom: -100px;
+        padding: 0 0 0 20px;
+    }
+
     .text-block__title {
         margin-bottom: 10px;
         max-width: 268px;
@@ -111,6 +155,12 @@
         font-size: 25px;
         font-weight: 700;
         line-height: 130%;
+
+        @media (max-width: 480px) {
+            font-size: 25px;
+            max-width: 224px;
+        }
+
     }
 
     .text-block__text {
@@ -120,6 +170,11 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 150%;
+
+        @media (max-width: 480px) {
+            font-size: 15px;
+            max-width: 251px;
+        }
     }
 
 
@@ -132,6 +187,11 @@
     top: 65px;
     padding: 24px 10px;
 
+    @media (max-width: 480px) {
+        padding: 16px 6px;
+    }
+
+
     &__number {
         color: $color-black;
         text-align: center;
@@ -140,6 +200,10 @@
         font-weight: 900;
         margin-bottom: 10px;
 
+
+        @media (max-width: 480px) {
+            font-size: 18px;
+        }
     }
 
     &__month {
