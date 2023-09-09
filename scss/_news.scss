@@ -1,0 +1,153 @@
+@import "./base";
+@import "./mixin";
+
+.news {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    padding: 172px 0 526px 0;
+
+    .news__container {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news__top {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 70px;
+    }
+
+    .news__bottom {
+        display: flex;
+        gap: 65px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.news__description-section {
+    max-width: 726px;
+
+    .news__description-section-title {}
+
+
+
+    .news__description-section-text {}
+}
+
+
+
+.card-news {
+    cursor: pointer;
+    border-radius: 56px 0 0;
+    position: relative;
+    transition: 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 56px 0 0;
+    }
+
+    &__wave-decor {
+        width: 100%;
+        position: absolute;
+        width: 100%;
+        top: 200px;
+        right: 0;
+        left: 0px;
+        color: $color-black;
+    }
+
+    &__date-block {
+        border-radius: 15px;
+        background: #FFF;
+        box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.06);
+    }
+
+    &__arrow-container {
+        position: absolute;
+        z-index: 11;
+        bottom: -30px;
+        right: 20px;
+
+        background-color: #FFF;
+        border-radius: 50px;
+
+        .card-news__button-arrow {
+            max-width: 55px;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 50px;
+            background-color: $color-black;
+        }
+    }
+
+
+
+}
+
+.text-block {
+    position: absolute;
+    bottom: -54px;
+    z-index: 10;
+    padding: 0 0 0 30px;
+
+    .text-block__title {
+        margin-bottom: 10px;
+        max-width: 268px;
+        color: $color-black;
+        font-family: Roboto;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    .text-block__text {
+        max-width: 365px;
+        color: $color-black;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+
+}
+
+
+.date-block {
+    position: absolute;
+    right: -25px;
+    top: 65px;
+    padding: 24px 10px;
+
+    &__number {
+        color: $color-black;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 900;
+        margin-bottom: 10px;
+
+    }
+
+    &__month {
+        color: $color-black;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 100;
+
+    }
+}
